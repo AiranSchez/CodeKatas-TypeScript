@@ -1,10 +1,15 @@
 export class PotterKata {
-    static calculateBasketPrice(basket: string[]): number {
+    bookPrice:number
+
+    constructor(price: number) {
+        this.bookPrice = price
+    }
+
+    calculateBasketPrice(basket: string[]): number {
         const isBasketEmpty = basket.length == 0
         if (isBasketEmpty){
             throw new Error("Empty basket")
         }
-        const bookPrice = 8
-        return basket.length * bookPrice
+        return basket.length * this.bookPrice
     }
 }

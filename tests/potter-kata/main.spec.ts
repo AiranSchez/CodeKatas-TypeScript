@@ -10,18 +10,19 @@ enum HarryPotterBooks {
 }
 
 describe('Potter kata tests', () => {
+    const potterKata = new PotterKata(8)
     it('should raise error if empty basket', () => {
         const basket: string[] = []
-        expect(() => PotterKata.calculateBasketPrice(basket)).toThrow("Empty basket")
+        expect(() => potterKata.calculateBasketPrice(basket)).toThrow("Empty basket")
     })
 
     it('should return price for 1 book', () => {
         const basket: HarryPotterBooks[] = [HarryPotterBooks.book1]
-        expect(PotterKata.calculateBasketPrice(basket)).toBe(8)
+        expect(potterKata.calculateBasketPrice(basket)).toBe(8)
     })
 
     it('should return price for all repeated books', () => {
         const basket: HarryPotterBooks[] = [HarryPotterBooks.book1, HarryPotterBooks.book1]
-        expect(PotterKata.calculateBasketPrice(basket)).toBe(16)
+        expect(potterKata.calculateBasketPrice(basket)).toBe(16)
     })
 })
