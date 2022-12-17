@@ -1,10 +1,8 @@
-export class Main {
-    public static COMMANDS = 'Hello world'
-    public param: string
-    constructor(param: string) {
-        this.param = param
-    }
-    public getParam(): string {
-        return this.param
+export class PotterKata {
+    static calculateBasketPrice(basket: string[]): number {
+        if (basket.length == 0){
+            throw new Error("Empty basket")
+        }
+        return 0
     }
 }
