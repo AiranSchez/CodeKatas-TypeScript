@@ -4,6 +4,7 @@ export class PotterKata {
         if (isBasketEmpty){
             throw new Error("Empty basket")
         }
-        return 8
+        const bookPrice = 8
+        return basket.length * bookPrice
     }
 }
