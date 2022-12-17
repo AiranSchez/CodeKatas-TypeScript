@@ -1,8 +1,10 @@
-import { Main } from '../../src/potter-kata/main'
+import { PotterKata } from '../../src/potter-kata/main'
 
-describe('Default test', () => {
-    it('should work', () => {
-        const main = new Main('Hello world')
-        expect(main.getParam()).toBe('Hello world')
+// Caso 0 - Cesta vacía -> Lanza error
+
+describe('Potter kata tests', () => {
+    it('should raise error if empty basket', () => {
+        const basket: string[] = []
+        expect(() => PotterKata.calculateBasketPrice(basket)).toThrow("Empty basket")
     })
 })
