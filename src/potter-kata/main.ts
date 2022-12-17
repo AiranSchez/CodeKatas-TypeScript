@@ -4,6 +4,6 @@ export class PotterKata {
         if (isBasketEmpty){
             throw new Error("Empty basket")
         }
-        return 0
+        return 8
     }
 }
