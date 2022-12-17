@@ -25,4 +25,9 @@ describe('Potter kata tests', () => {
         const basket: HarryPotterBooks[] = [HarryPotterBooks.book1, HarryPotterBooks.book1]
         expect(potterKata.calculateBasketPrice(basket)).toBe(16)
     })
+
+    it('should return price with discount for 2 different books', () => {
+        const basket: HarryPotterBooks[] = [HarryPotterBooks.book1, HarryPotterBooks.book2]
+        expect(potterKata.calculateBasketPrice(basket)).toBe(15.20)
+    })
 })
